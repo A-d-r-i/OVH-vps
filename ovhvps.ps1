@@ -3,7 +3,7 @@ $token = "$env:TELEGRAM"
 $chatid = "$env:CHAT_ID"
 
 $data = ((Invoke-Webrequest $link | ConvertFrom-Json).datacenters | Where-Object { $_.datacenter -in @("SBG", "GRA")})
-$dispo = $data | Where-Object {$_.status -eq "out-of-stock"} #out-of-stock
+$dispo = $data | Where-Object {$_.status -eq "available"} #out-of-stock
 if ($dispo -eq $NULL) {
 	
 	"VPS indisponible"
