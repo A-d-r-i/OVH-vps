@@ -7,7 +7,7 @@ $dispo = $data | Where-Object {$_.status -eq "available"} #out-of-stock
 
 if ($dispo -eq $NULL) {
 	
-	"VPS indisponible"
+	#"VPS indisponible"
 	
 } else {
 	$message = "⚠ <b>VPS VLE-4 DISPO !</b> `n"
